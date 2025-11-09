@@ -4,7 +4,7 @@ This project showcases SQL skills in data analysis and reporting. The dataset co
 
 ## Key features:
 - **Data Loading:** Loaded the data into PostgreSQL.
-- **Data Cleaning:** Identified and updated missing or null records using 'UPDATE' statement.
+- **Data Cleaning:** Identified and updated missing or null records using ```UPDATE``` statement.
 - **Exploratory Data Analysis(EDA):** Here we explored the data to understand and identify key information the data can provide.
 - **Business Intelligence Derivation:** Deduced key business metrics from the data following curated business questions.
 
