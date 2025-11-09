@@ -17,6 +17,11 @@ This project showcases SQL skills in data analysis and reporting. The dataset co
 
 ## Skills and Concepts 
 - **Data aggregation** with ``` SUM(), COUNT() and AVG()```.
+- **Date function ```EXTRACT(YEAR FROM ...)```.
+- **Grouping and sorting** using ```GROUP BY and ORDER BY``` statements.
+- Window functions for cummulative and partitioned analysis.
+- Formatting outputs using ```TO_CHAR``` for currency and percentages.
+- Subqueries and CTEs for better query structure and readability.
 
 
 
