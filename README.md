@@ -4,7 +4,7 @@ This project showcases SQL skills in data analysis and reporting. The dataset co
 
 ## KEY FEATURES:
 - **Data Loading:** Loaded the data into PostgreSQL.
-- **Data Cleaning:**
+- **Data Cleaning:** Identified and updated missing or null records using 'UPDATE' statement.
 
 
 
