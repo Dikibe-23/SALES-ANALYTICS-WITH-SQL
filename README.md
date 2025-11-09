@@ -16,7 +16,7 @@ This project showcases SQL skills in data analysis and reporting. The dataset co
 - Prepare analytical queries suitable for integration into dasboards and BI tools.
 
 ## Skills and Concepts 
-- **Data aggregation** with SUM(), COUNT() and AVG().
+- **Data aggregation** with '''SUM(), COUNT() and AVG()'''.
 
 
 
