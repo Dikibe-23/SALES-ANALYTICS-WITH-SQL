@@ -55,6 +55,59 @@ quantity is NULL
 OR 
 price_per_unit is NULL;
 ```
+- **cleaning the data using ```UPDATE``` statement.**
+```
+UPDATE retailsales
+SET age = 27
+WHERE transactions_id = 432;
 
+UPDATE retailsales
+SET age = 30
+WHERE transactions_id = 1367;
+
+UPDATE retailsales
+SET age = 35
+WHERE transactions_id = 1391;
+
+UPDATE retailsales
+SET age = 19
+WHERE transactions_id = 1432;
+
+UPDATE retailsales
+SET age = 20
+WHERE transactions_id = 150;
+
+UPDATE retailsales
+SET age = 24
+WHERE transactions_id = 845;
+
+UPDATE retailsales
+SET age = 28
+WHERE transactions_id = 1150;
+
+UPDATE retailsales
+SET age = 32
+WHERE transactions_id = 1845;
+
+UPDATE retailsales
+SET age = 35
+WHERE transactions_id = 797;
+
+UPDATE retailsales
+SET age = 39
+WHERE transactions_id = 921;
+
+UPDATE retailsales
+SET quantity = 3
+WHERE transactions_id = 679;
+
+UPDATE retailsales
+SET quantity = 2
+WHERE transactions_id = 746;
+
+UPDATE retailsales
+SET quantity = 4
+WHERE transactions_id = 1225;
+```
 
 
