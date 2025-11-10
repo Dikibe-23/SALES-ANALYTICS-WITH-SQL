@@ -23,5 +23,14 @@ This project showcases SQL skills in data analysis and reporting. The dataset co
 - **Formatting outputs** using ```TO_CHAR``` for currency and percentages.
 - **Subqueries and CTEs** for better query structure and readability.
 
+## Steps
+Imagine we have the data named ```retailsales``` already in our database (relational) and wish to retrieve the data to answer certain key business questions, the steps are outlined below.
+
+### 1. Data retrieval and exploration
+
+```
+SELECT * FROM retailsales;
+```
+
 
 
