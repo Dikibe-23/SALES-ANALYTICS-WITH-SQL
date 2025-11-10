@@ -32,5 +32,29 @@ Imagine we have the data named ```retailsales``` already in our database (relati
 SELECT * FROM retailsales;
 ```
 
+### 2. Check for missing records and clean the data
+
+```
+SELECT * FROM retailsales 
+WHERE
+transactions_id is NULL
+OR
+sale_date is NULL
+OR
+sale_time is NULL
+OR
+customer_id is NULL
+OR
+gender is NULL
+OR
+age is NULL
+OR
+category is NULL
+OR
+quantity is NULL
+OR 
+price_per_unit is NULL;
+```
+
 
 
