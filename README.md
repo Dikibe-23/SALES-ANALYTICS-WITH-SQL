@@ -141,7 +141,7 @@ SELECT COUNT(transactions_id) AS total_sales FROM retailsales;
 SELECT COUNT(DISTINCT category) AS item_category FROM retailsales
 ```
 
--**BUSINESS QUESTIONS**
+- **BUSINESS QUESTIONS**
 
 1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
 
@@ -298,6 +298,13 @@ FROM shift_orders
 GROUP BY shifts;
 ```
 
+## Insights
+
+1. July 2022 was on average the best selling month. Likewise in 2023, Feb saw the highest average revenue.
+2. Clothing receieved the highest number of patronage.
+3. Electronics had the highest contribution to total revenue 2022 and 2023 with 35.38% compared to other categories.
+4. In 2022, the company realized 454,725€ in revenue across all categories. while in 2023, it realized 458,895€.
+5. Afternoon shift workers processed the highest number of orders.
 
 
 
