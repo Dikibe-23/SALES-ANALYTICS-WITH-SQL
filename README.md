@@ -142,7 +142,7 @@ SELECT COUNT(transactions_id) AS total_sales FROM retailsales;
 
 - **BUSINESS QUESTIONS**
 
-Q1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
+1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
 
 ```
 SELECT * FROM retailsales
