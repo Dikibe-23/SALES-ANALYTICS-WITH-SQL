@@ -55,7 +55,7 @@ quantity is NULL
 OR 
 price_per_unit is NULL;
 ```
-- **cleaning the data using ```UPDATE``` statement.**
+- **Cleaning the data using ```UPDATE``` statement.**
 ```
 UPDATE retailsales
 SET age = 27
@@ -123,5 +123,25 @@ UPDATE retailsales
 SET price_per_unit = 300
 WHERE transactions_id = 679;
 ```
+
+- **Data Exploration:** 
+
+1. We want to know the total number of customers the business has so far order by customer _id in Ascending order 
+
+```
+SELECT COUNT(DISTINCT customer_id) AS total_customer FROM retailsales;
+```
+2. Total number of transactions made by the business so far.
+
+```
+SELECT COUNT(transactions_id) AS total_sales FROM retailsales;
+```
+3. We also want to know the number of item category the business has.
+
+```
+
+**BUSINESS QUESTIONS**
+
+
 
 
