@@ -287,7 +287,7 @@ AS
 SELECT *,
 	CASE
 		WHEN EXTRACT(HOUR FROM sale_time) < 13 THEN 'Morning'
-		WHEN EXTRACT(HOUR FROM sale_time) BETWEEN 13 AND 21 THEN 'Afternoon'
+		WHEN EXTRACT(HOUR FROM sale_time) BETWEEN 13 AND 20 THEN 'Afternoon'
 		ELSE 'Night'
 	END AS shifts
 FROM retailsales
