@@ -110,4 +110,18 @@ SET quantity = 4
 WHERE transactions_id = 1225;
 ```
 
+```
+UPDATE retailsales
+SET price_per_unit = 150
+WHERE transactions_id = 1225;
+
+UPDATE retailsales
+SET price_per_unit = 200
+WHERE transactions_id = 746;
+
+UPDATE retailsales
+SET price_per_unit = 300
+WHERE transactions_id = 679;
+```
+
 
