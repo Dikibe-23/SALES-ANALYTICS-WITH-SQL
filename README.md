@@ -278,7 +278,7 @@ FROM retailsales
 GROUP BY category;
 ```
 
-Q14. Write an query to create each shift and number of orders (Example Morning shift <12, Afternoon shift between 12 - 18, etc.) We use CTE in this example.
+Q14. Write an query to create each shift and number of orders (Example Morning shift <13, Afternoon shift between 13 - 20, etc.) We use CTE in this example.
 ```
 SELECT * FROM retailsales;
 
