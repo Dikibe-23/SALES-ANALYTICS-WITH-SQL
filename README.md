@@ -5,14 +5,13 @@
 2. [Key features](#Key-features)
 3. [Skills and Concepts](#Skills-and-Concepts)
 4. [Steps](#Steps)
-5. [Insights](#Insights)
+5. [Business Insights](#Business-Insights)
 
    
 ## Description:
 This project showcases SQL skills in data analysis and reporting. The dataset contains sales transactions with information on product categories, quantity, prices, and dates. Queries were written to extract business insights such as seasonal trend, product performance, and percentage contributions. I have skipped the process of creating a database and creating a table in PostgreSQL. The focus is on extracting key business information froom the dataset provided in the project repository.
 
 ## Key features:
-- **Data Loading:** Loaded the data into PostgreSQL.
 - **Data Cleaning:** Identified and updated missing or null records using ```UPDATE``` statement.
 - **Exploratory Data Analysis(EDA):** Here we explored the data to understand and identify key information the data can provide.
 - **Business Intelligence Derivation:** Deduced key business metrics from the data following curated business questions.
@@ -308,7 +307,7 @@ FROM shift_orders
 GROUP BY shifts;
 ```
 
-## Insights
+## Business Insights
 
 1. July 2022 was on average the best selling month. Likewise in 2023, Feb saw the highest average revenue.
 2. Clothing receieved the highest number of patronage.
