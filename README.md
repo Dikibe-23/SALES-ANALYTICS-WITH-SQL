@@ -143,7 +143,7 @@ SELECT COUNT(DISTINCT category) AS item_category FROM retailsales
 
 - **BUSINESS QUESTIONS**
 
-1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
+Q1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
 
 ```
 SELECT * FROM retailsales
@@ -220,6 +220,7 @@ FROM retailsales
 GROUP BY category, EXTRACT(YEAR FROM sale_date)
 ORDER BY year;
 ```
+
 Q9. How much percentage did each category to the company's entire year revenue.
 ```
 SELECT DISTINCT EXTRACT(YEAR FROM sale_date) AS year,
