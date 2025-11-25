@@ -195,7 +195,110 @@ GROUP BY category, EXTRACT(YEAR FROM sale_date)
 ORDER BY year;
 ```
 
-Q7. 
+Q7. How much revenue does the company make according to category per year.
+
+```
+SELECT DISTINCT EXTRACT(YEAR FROM sale_date) AS year,
+category,
+TO_CHAR(SUM(quantity * price_per_unit), 'L999,999,999,999') AS total_revenue,
+FROM retailsales
+GROUP BY category, EXTRACT(YEAR FROM sale_date)
+ORDER BY year;
+```
+
+Q8. How much does the company make from sales for the entire year across all categories.
+
+```
+SELECT DISTINCT EXTRACT(YEAR FROM sale_date) AS year,
+category,
+TO_CHAR(SUM(quantity * price_per_unit), 'L999,999,999,999') AS total_revenue,
+TO_CHAR(SUM
+(SUM(quantity * price_per_unit)) OVER 
+(PARTITION BY EXTRACT(YEAR FROM sale_date)), 'L999, 999, 999, 999') 
+AS entire_year_rev
+FROM retailsales
+GROUP BY category, EXTRACT(YEAR FROM sale_date)
+ORDER BY year;
+```
+Q9. How much percentage did each category to the company's entire year revenue.
+```
+SELECT DISTINCT EXTRACT(YEAR FROM sale_date) AS year,
+category,
+TO_CHAR(SUM(total_sale), 'FM999,999,999,999 "€"') AS total_rev,
+TO_CHAR(SUM(SUM(total_sale)) OVER (PARTITION BY EXTRACT (YEAR FROM sale_date)), 
+'FM999,999,999,999 "€"') AS cumm_rev,
+TO_CHAR(100.0 * SUM(total_sale) / SUM(SUM(total_sale)) OVER (PARTITION BY EXTRACT(YEAR FROM sale_date)), 'FM999.00 "%"') AS pct_rev_contribution
+FROM retailsales
+GROUP BY category, EXTRACT(YEAR FROM sale_date)
+ORDER BY year;
+```
+
+Q10. Write an SQL query to find the total number of transactions made by each gender for each category.
+```
+SELECT category, gender,
+COUNT(transactions_id) AS total_transactions
+FROM retailsales
+GROUP BY gender, category
+ORDER BY category;
+```
+
+Q11. Write an SQL to calculate the average sale for each month. Find out best selling month in each year.
+```
+SELECT * FROM
+(
+	SELECT  
+	EXTRACT(YEAR FROM sale_date) AS year,
+	EXTRACT(MONTH FROM sale_date) AS month,
+	AVG(total_sale) AS avg_sale,
+	RANK() OVER(PARTITION BY EXTRACT(YEAR FROM sale_date) ORDER BY AVG(total_sale) DESC)
+	AS ranking
+	FROM retailsales
+	GROUP BY 1, 2
+	ORDER BY 4, 1) AS rank_table
+
+WHERE ranking = 1;
+```
+
+Q12. Write an SQL query to determine the top 5 customers based on transaction amount. find out what items category these customers bought.
+```
+SELECT customer_id,
+SUM(total_sale) AS total_sales
+FROM retailsales
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 5;
+```
+
+Q13. Find the number of unique customers who purchased items from each category.
+```
+SELECT COUNT (DISTINCT customer_id) AS distinct_customer, 
+category
+FROM retailsales
+GROUP BY category;
+```
+
+Q14. Write an query to create each shift and number of orders (Example Morning shift <12, Afternoon shift between 12 - 18, etc.) We use CTE in this example.
+```
+SELECT * FROM retailsales;
+
+WITH shift_orders
+AS
+(
+SELECT *,
+	CASE
+		WHEN EXTRACT(HOUR FROM sale_time) < 13 THEN 'Morning'
+		WHEN EXTRACT(HOUR FROM sale_time) BETWEEN 13 AND 21 THEN 'Afternoon'
+		ELSE 'Night'
+	END AS shifts
+FROM retailsales
+)
+SELECT shifts,
+COUNT(*) AS number_of_order
+FROM shift_orders
+GROUP BY shifts;
+```
+
+
 
 
 
