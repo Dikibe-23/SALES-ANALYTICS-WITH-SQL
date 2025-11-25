@@ -140,7 +140,61 @@ SELECT COUNT(transactions_id) AS total_sales FROM retailsales;
 
 ```
 
-**BUSINESS QUESTIONS**
+- **BUSINESS QUESTIONS**
+
+Q1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
+
+```
+SELECT * FROM retailsales
+WHERE category = 'Electronics'
+AND 
+TO_CHAR(sale_date, 'YYYY-MM') = '2022-10'
+AND
+quantity > 1;
+```
+
+Q2. Write an SQL query to retrieve all columns for sales made on a '2022-06-16'.
+
+```
+SELECT * FROM retailsales
+WHERE sale_date = '2022-06-16'
+```
+
+Q3. Write an SQL query to find the average sale, total orders, and total sale for each category.
+
+```
+SELECT category, COUNT(transactions_id) AS total_order, ROUND(AVG(total_sale)) AS avg_sale, SUM(total_sale) AS sum_of_sales 
+FROM retailsales
+GROUP BY 
+category;
+```
+
+Q4. Calculate the percentage of trasaction by category.
+```
+SELECT category, COUNT(transactions_id) AS total_order, ROUND(COUNT(transactions_id)) * 100 / (SELECT COUNT(transactions_id) FROM retailsales) AS order_pct 
+FROM retailsales
+GROUP BY
+category;
+```
+Q5. Write an SQL query to extract transaction where total sale exceeded 500.
+
+```
+SELECT * FROM retailsales
+WHERE total_sale > 500;
+```
+
+Q6. How much revenue does the company make according to category per year.
+
+```
+SELECT DISTINCT EXTRACT(YEAR FROM sale_date) AS year,
+category,
+TO_CHAR(SUM(quantity * price_per_unit), 'L999,999,999,999') AS total_revenue,
+FROM retailsales
+GROUP BY category, EXTRACT(YEAR FROM sale_date)
+ORDER BY year;
+```
+
+Q7. 
 
 
 
