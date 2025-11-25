@@ -137,10 +137,11 @@ SELECT COUNT(DISTINCT customer_id) AS total_customer FROM retailsales;
 SELECT COUNT(transactions_id) AS total_sales FROM retailsales;
 ```
 3. We also want to know the number of item category the business has.
-
+```
+SELECT COUNT(DISTINCT category) AS item_category FROM retailsales
 ```
 
-- **BUSINESS QUESTIONS**
+-**BUSINESS QUESTIONS**
 
 1. Write an SQL query to extract all transactions where the category is 'Electronics' for sales made in '2022-10'
 
