@@ -2,7 +2,7 @@
 
 ## Contents
 1. [Key features](#Key-features)
-2. [Skills and Concepts](#Skills-Concepts)
+2. [Skills and Concepts](#Skills-and-Concepts)
 3. [Steps](#Steps)
 4. [Insights](#Insights)
 ## Description:
