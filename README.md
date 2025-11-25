@@ -3,7 +3,7 @@
 ## Contents
 1. [Key features](#Key-features)
 2. [Skills and Concepts](#Skills-Concepts)
-3. [Steps](#Steps)(#Data-retrieval-and-exploration)
+3. [Steps](#Steps)
 4. [Insights](#Insights)
 ## Description:
 This project showcases SQL skills in data analysis and reporting. The dataset contains sales transactions with information on product categories, quantity, prices, and dates. Queries were written to extract business insights such as seasonal trend, product performance, and percentage contributions. I have skipped the process of creating a database and creating a table in PostgreSQL. The focus is on extracting key business information froom the dataset provided in the project repository.
