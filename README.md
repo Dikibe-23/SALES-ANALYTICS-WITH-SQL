@@ -229,7 +229,7 @@ GROUP BY category, EXTRACT(YEAR FROM sale_date)
 ORDER BY year;
 ```
 
-Q9. How much percentage did each category to the company's entire year revenue.
+Q9. How much percentage did each category contribute to the company's entire year revenue.
 ```
 SELECT DISTINCT EXTRACT(YEAR FROM sale_date) AS year,
 category,
